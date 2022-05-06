@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MJ's Color Picker</title>
+
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+  <div class="game-wrapper">
+    <div class="game-board">
+      <canvas id="game-canvas" width="500px" height="580px"></canvas>
+      <span class="score-wrapper">
+        <span>Score:</span>
+        <span id="score">0</span>
+      </span>
+    </div>
+    <div class="controls-wrapper">
+      <button onClick="togglePause()">TOGGLE PAUSE</button>
+      <button onClick="restartGame()">RESTART GAME</button>
+      <button onClick="toggleAutoAcceleration()">Toggle auto acceleration</button>
+    </div>
+    <div class="debug-options-wrapper">
+      <div class="option-wrapper">
+        <span class="option-label">FPS</span>
+        <input id="fps_input" type="number" value="30" onClick="setGameSettingFromHtmlField('fps')">
+      </div>
+      <div class="option-wrapper">
+        <span class="option-label">Tiles speed</span>
+        <input type="number" id="letterSpeed_input" value="2" onclick="setGameSettingFromHtmlField('letterSpeed')">        
+      </div>
+      <div class="option-wrapper">
+        <span class="option-label">Spawn probability (per mille per tick)</span>
+        <input type="number" id="chanceOfSpawningPerGameTick_input" value="75" onclick="setGameSettingFromHtmlField('chanceOfSpawningPerGameTick')">        
+      </div>
+      <button onClick="generateRandomLetter()">SPAWN LETTER</button>
+
+    </div>
+  </div>
+
+  <script src="js/gameData.js"></script>
+  <script src="js/letters.js"></script>
+  <script src="js/helperFunctions.js"></script>
+  <script src="js/gameCore.js"></script>
+  <script src="js/gameControls.js"></script>
+  <script src="js/graphics.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+setEventListeners(); 
+setDefaultGameData();
+setInputFieldsAccordingToGameSettings();
+playGame();

@@ -1,0 +1,47 @@
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-wrapper .game-board {
+    display: flex;
+    flex-direction: row;
+}
+
+.score-wrapper {
+    margin: 50px 0 0 40px;
+}
+
+#game-canvas {
+    outline: 2px solid black;
+}
+
+.controls-wrapper {
+    margin: 10px 0;
+}
+
+.controls-wrapper button {
+    width: 100px;
+}
+
+.debug-options-wrapper {
+    border-top: 1px solid black;
+    padding: 10px 0 0 0;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.debug-options-wrapper .option-label {
+    width: 300px;
+    display: inline-block;
+}
+
+.debug-options-wrapper input {
+    width: 75px;
+    display: inline-block;
+}
+
+.debug-options-wrapper button {
+    width: 300px;
+}
