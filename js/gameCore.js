@@ -71,3 +71,7 @@ function setPressedKey(key) {
 function resetPressedKeys() {
     gameStats.pressedKeys = {}
 }
+
+function saveNewLetter(letter) {
+    gameStats.activeLetters.push(letter);
+}

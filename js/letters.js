@@ -8,7 +8,8 @@ function randomlyCreateLetter() {
     if (!passesSpawnChance()) {
         return;
     }
-    generateRandomLetter();
+    const letter = generateRandomLetter();
+    saveNewLetter(letter);
 }
 
 function generateRandomLetter() {
@@ -36,7 +37,7 @@ function generateRandomLetter() {
    const pickedLetter = possibleLetters[generateRandomIntegerInDefinedRange(0,possibleLetters.length-1)];
 
    const result = new Letter({xCoordinate, yCoordinate, size, bgColorString, value: pickedLetter, fontSize});
-   gameStats.activeLetters.push(result);
+   return result;
 }
 
 class Letter {
